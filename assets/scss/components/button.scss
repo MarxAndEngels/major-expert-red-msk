@@ -1,0 +1,197 @@
+.button {
+  display: flex;
+  height: 48px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: $inputBorderRadius;
+  cursor: pointer;
+  transition: .24s;
+  width: fit-content;
+  background: $color-main-two;
+  color: #fff;
+
+  &.button--credit {
+    padding: 0 16px;
+    box-shadow: $box-shadow-button;
+  }
+
+  &.button--slider {
+    position: relative;
+    z-index: 2;
+    background: $color-main;
+    color: #fff;
+    padding: 0 16px;
+    box-shadow: $box-shadow-button;
+  }
+
+  &.button--filter {
+    width: 14%;
+    margin-top: 4px;
+    height: 40px;
+    transform: translateY(-4px);
+    background-color: $color-black;
+    @media screen and (max-width: $mobile) {
+      font-size: 14px;
+      height: 42px;
+      width: 100%;
+    }
+  }
+  &.button--filter-top {
+    width: 14%;
+    margin-top: 4px;
+    height: 40px;
+    transform: translateY(-4px);
+    background-color: $color-grey-normal;
+    color: $color-black;
+    @media screen and (max-width: $mobile) {
+      font-size: 14px;
+      height: 42px;
+      width: 100%;
+    }
+  }
+
+  &.button--info {
+    background: $light-blue;
+    color: $color-black;
+  }
+
+  &.button--form {
+    width: 100%;
+  }
+
+  &.button--show {
+    background: none;
+    color: $blue;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: auto;
+    @media screen and (max-width: $mobile) {
+      font-size: 15px;
+    }
+  }
+  &.button--callback-phone{
+    background: $greenCallback;
+    color: $color-white;
+    max-width: 16% !important;
+    min-width: 16% !important;
+    width: 16% !important;
+  }
+
+  &.button--more {
+    margin-top: 6px;
+    background: $color-info;
+    font-weight: 600;
+    color: $color-black;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  &.button--view {
+    background: $light-blue;
+    width: $inputHeight;
+    padding: 0;
+    transition: .24s;
+    @media screen and (max-width: $mobile) {
+      width: 32px;
+      height: 32px;
+    }
+
+    svg {
+      transition: .24s;
+      width: 24px;
+      height: 24px;
+    }
+
+    &.active {
+      background: $color-main;
+
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+
+  &.button--autoteka {
+    background: $light-blue;
+    width: content-box;
+    padding: 0 12px;
+
+    svg {
+      transition: .24s;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &.button--like {
+    background: $light-blue;
+    padding: 0 12px;
+    width: 48px;
+
+    svg {
+      transition: .24s;
+      width: 18px;
+      height: 18px;
+    }
+
+    &.button--like-mini {
+      background-color: $color-white;
+      height: 30px;
+      border-radius: 40px;
+    }
+  }
+
+  &.button--disabled {
+    background: $grey;
+    color: $black;
+    pointer-events: none;
+  }
+
+  &.button--cookie {
+    padding: 0 16px;
+  }
+
+  &.button--icon {
+    max-width: $inputHeight;
+    background: $light-blue;
+    color: $blue;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.button--autoteka-text {
+  color: $black;
+  font-weight: bold;
+  margin-left: 6px;
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.button--autoteka-vin {
+  display: none;
+  margin-left: 4px;
+  color: $black;
+  font-weight: bold;
+  @media screen and (max-width: $mobile) {
+
+    display: block;
+  }
+
+}
+
+.button-icon{
+  width: 22px;
+  height: 22px;
+  fill: $color-white;
+}

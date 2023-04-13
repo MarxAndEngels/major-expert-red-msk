@@ -1,0 +1,27 @@
+.offer__buttons{
+  &.offer__buttons--short{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0 4px;
+    gap: 26px;
+    .button{
+      flex: 1;
+      height: 38px;
+      padding: 0 6px;
+      font-size: 14px;
+    }
+  }
+  &.offer__buttons--page{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    gap: 8px;
+    .button{
+      min-width: calc(50% - 8px);
+      flex: 1;
+    }
+  }
+}

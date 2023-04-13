@@ -1,0 +1,48 @@
+.crumbs {
+  display: flex;
+  margin: 16px 0 0;
+  font-size: 16px;
+  list-style: none;
+  row-gap: 8px;
+  column-gap: 0;
+  flex-wrap: wrap;
+  @media screen and (max-width: $mobile) {
+    font-size: 14px;
+    row-gap: 4px;
+    margin: 26px 0 0;
+  }
+}
+
+.crumbs__item {
+  color: $color-main;
+  position: relative;
+  padding-left: 16px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: $color-main;
+    border-radius: 4px;
+    left: 6px;
+    top: 8px;
+    font-size: 10px;
+  }
+
+  &:first-child {
+    padding-left: 0;
+    &:after {
+      display: none;
+    }
+  }
+  span{
+    font-size: 12px;
+  }
+}
+
+.crumbs__link {
+  font-size: 12px;
+  text-decoration: none;
+  color: $color-text;
+}

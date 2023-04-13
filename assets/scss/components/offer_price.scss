@@ -1,0 +1,58 @@
+.offer__price {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 16px;
+  margin: 8px 0;
+  width: 100%;
+  &.offer__price--small {
+    font-size: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 0;
+    gap: 4px;
+  }
+
+  &.offer__price--short {
+    font-size: 16px;
+  }
+
+  &.offer__price--long {
+    font-size: 18px;
+  }
+
+  &.offer__price--page {
+    font-size: 18px;
+    padding: 0 16px;
+    @media screen and (max-width: $mobile){
+      row-gap: 2px;
+      column-gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.offer__price-actual {
+  color: $color-main;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.offer__price-credit {
+  font-weight: 300;
+  font-size: .76em;
+  @media screen and (max-width: $mobile){
+    margin-top: 4px;
+  }
+}
+
+.offer__price-description {
+  font-weight: 300;
+  font-size: .72em;
+  color: $color-red;
+  @media screen and (max-width: $mobile){
+    margin-top: 4px;
+  }
+}

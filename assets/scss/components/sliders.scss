@@ -1,0 +1,255 @@
+.main__slider-wrapper {
+  aspect-ratio: 5/2;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  @media screen and (max-width: $mobile) {
+    aspect-ratio: 5/3;
+  }
+}
+
+.carousel--main {
+  position: relative;
+  margin-bottom: 0 !important;
+  padding-top: 10px;
+  @media screen and (max-width: $mobile) {
+    padding-top: 8px;
+  }
+
+  .carousel__slide {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 6/2;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: $border-radius;
+    padding: 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    @media screen and (max-width: $mobile) {
+      aspect-ratio: 6/3.3;
+    }
+
+    .slide__image {
+      aspect-ratio: 6/2;
+      -o-object-fit: cover;
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      @media screen and (max-width: $mobile) {
+        aspect-ratio: 6/3.3;
+      }
+    }
+  }
+
+  .carousel__nav {
+    display: block;
+    position: absolute;
+    width: calc(100%);
+    height: 0;
+    top: 56%;
+    left: 0px;
+    z-index: 2;
+    //display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $mobile) {
+      top: 86%;
+    }
+
+
+    button {
+      width: 40px;
+      height: 40px;
+      display: flex !important;
+      background-color: $color-main;
+
+      &:hover {
+        svg {
+          transform: scale(1.2);
+        }
+      }
+
+      svg {
+        transition: .24s;
+        width: 16px;
+        height: 16px;
+        stroke: #fff;
+      }
+    }
+  }
+
+  .carousel__dots {
+    display: none !important;
+  }
+
+  .carousel__slide-content {
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    left: 24px;
+    color: $color-grey-light;
+    font-size: 1em;
+    @media screen and (max-width: $mobile) {
+      top: 8px;
+      left: 8px;
+      .carousel__slide-title {
+        font-size: 1.6em;
+        margin-top: 12px;
+      }
+      .carousel__slide-text {
+        font-size: 1.4em;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .carousel__slide-title {
+    font-size: 3.2em;
+    font-weight: bold;
+  }
+
+  .carousel__slide-text {
+    margin-top: 16px;
+    font-size: 2.5em;
+    margin-bottom: 24px;
+  }
+}
+
+
+.offer__slider-wrapper {
+  //aspect-ratio: 4/3;
+  //-o-object-fit: cover;
+  //object-fit: cover;
+  //width: 100%;
+  height: 377px;
+  margin-top: 16px;
+  @media screen and (max-width: $small-desktop) {
+    height: 291px;
+  }
+  @media screen and (max-width: $tablet) {
+    height: 219px;
+  }
+  @media screen and (max-width: $tablet) {
+    height: auto;
+  }
+}
+
+.carousel--offer {
+  position: relative;
+  margin-bottom: 0 !important;
+
+  .carousel__track {
+    gap: 16px;
+    @media screen and (max-width: $tablet) {
+      gap: 0;
+    }
+  }
+
+  .carousel__slide {
+    position: relative;
+    width: 40%;
+    padding: 0;
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+    }
+
+    img {
+      aspect-ratio: 4/3;
+      -o-object-fit: cover;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .carousel__nav {
+    display: flex;
+    position: absolute;
+    width: calc(100% + 56px);
+    height: 0;
+    top: 50%;
+    left: -28px;
+    z-index: 2;
+    //display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      left: 0;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+      display: flex !important;
+      background-color: $color-main-two;
+      box-shadow: $box-shadow-button;
+
+      &:hover {
+        svg {
+          transform: scale(1.2);
+        }
+      }
+
+      svg {
+        transition: .24s;
+        width: 16px;
+        height: 16px;
+        stroke: #fff;
+      }
+    }
+  }
+
+  .carousel__dots {
+    display: none !important;
+  }
+
+  .carousel__slide-content {
+    position: absolute;
+    z-index: 1;
+    top: 24px;
+    left: 24px;
+    color: $color-text;
+    font-size: 1em;
+  }
+
+  .carousel__slide-title {
+    font-size: 3em;
+  }
+
+  .carousel__slide-text {
+    margin-top: 16px;
+    font-size: 1.6em;
+  }
+}
+
+
+.wrapper__main_advantages-content-index{
+  display: flex;
+  justify-content: space-between;
+  &:first-child {
+      width: 60%;
+  }
+
+}
+
+.advantages-content-index{
+  &:first-child {
+    width: 58%;
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+    }
+}
+  &:last-child {
+    width: 40%;
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+}
+}

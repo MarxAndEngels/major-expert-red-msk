@@ -1,0 +1,123 @@
+//@font-face {
+//  font-family: 'TerminatorGenisys';
+//  src: url('../fonts/TerminatorGenisys.ttf');
+//  font-display: swap;
+//}
+
+$fontApple: -apple-system, system-ui, BlinkMacSystemFont, “Segoe UI”, Roboto, “Helvetica Neue”, Arial, sans-serif;
+
+
+
+//$fontTerminator: 'TerminatorGenisys';
+
+$desktop-container: 1248px;
+$desktop: 1400px;
+
+$small-desktop-container: 960px;
+$small-desktop: 1224px;
+
+$tablet-container: 720px;
+$tablet: 984px;
+
+$mobile-container: 100%;
+$mobile: 748px;
+$extra-small: 340px;
+
+
+$color-main: #f24943;
+$color-main-hover: #a1251b;
+$color-main-alternative: #d22e28;
+$color-main-two: #f24943;
+$box-shadow-button: 0 0 24px 0px rgb(220 49 35 / 48%);
+
+
+$color-white: #fff;
+$color-black: #212121;
+$color-grey-light: #FAFAFA;
+$color-grey-normal: #E1E1E1;
+$color-grey: #9E9E9E;
+$color-grey-dark: #757575;
+$color-text: #212121;
+$color-red: #F44336;
+$color-pink: #E91E63;
+$color-purple: #9C27B0;
+$color-green: #4CAF50;
+$color-light-green: #8BC34A;
+$color-lime: #CDDC39;
+$color-blue: #2196F3;
+$color-blue-lighten: #90CAF9;
+$color-cyan: #00BCD4;
+$color-teal: #009688;
+$color-yellow: #FFEB3B;
+$color-amber: #FFC107;
+$color-orange: #FF9800;
+$color-deep-orange: #FF5722;
+$color-brown: #795548;
+$color-blue-grey: #607D8B;
+$color-info: #43dce2;
+
+
+$red: #d71313;
+$green: #0dc268;
+$greenHover: #0cad5d;
+$greenVin: #62b48a;
+$greenCallback: #75c89d;
+$black: #1e1e1e;
+$grey: #e7e7e7;
+$darkGrey: #818181;
+$lightGrey: #f4f4f4;
+$backgroundGrey: #f4f4f4;
+$lightGreyHover: #e5e5e5;
+$skeletonGrey: #f4f4f4;
+$error: rgba(255, 0, 0, 0.5);
+$error_text: rgb(220, 15, 15);
+$light-blue: #a4f1c8;
+$blue: #2196F3;
+$markGrey: #d9d7d7;
+
+$transitionHover: 0.2s cubic-bezier(0.37, 0, 0.63, 1);
+
+$box-shadow: 0 0 32px -16px rgb(0 0 0 / 32%);
+$border-radius: 8px;
+$inputBorderRadius: 4px;
+$inputHeight: 40px;
+
+//MIXINS
+@mixin grid-item {
+  padding: 16px;
+  background: #fff;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  @media screen and (max-width: $mobile) {
+    padding: 8px;
+  }
+}
+
+@mixin horizontal-scrollbar {
+  padding-bottom: 16px;
+  &::-webkit-scrollbar {
+    height: 4px;
+    background-color: $color-grey-light; /* or add it to the track */
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $color-main-two;
+    border-radius:4px;
+  }
+}
+
+@mixin lazyload {
+  @media screen and (max-width: $mobile) {
+    opacity: 0;
+    visibility: hidden;
+    transition: $transitionHover;
+    will-change: opacity;
+    -webkit-backface-visibility: hidden;
+  }
+}
+
+@mixin lazyloaded {
+  opacity: 1;
+  visibility: visible;
+  transition: $transitionHover;
+  -webkit-backface-visibility: visible;
+}

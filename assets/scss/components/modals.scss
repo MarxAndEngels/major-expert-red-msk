@@ -1,0 +1,123 @@
+.modal__wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  left: 0;
+  z-index: 10;
+
+  .personal__data {
+    margin-top: 8px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    z-index: 100;
+  }
+}
+
+.modal__overlay {
+  background: rgba(0, 0, 0, .8);
+  z-index: 15;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: .24s;
+  //cursor: pointer;
+  //&:hover{
+  //  background: rgba(0,0,0,.8);
+  //}
+}
+
+.modal__content {
+  padding: 16px;
+  width: 480px;
+  min-height: 270px;
+  height: auto;
+  background: #fff;
+  margin: 160px auto;
+  position: relative;
+  z-index: 20;
+  border-radius: $border-radius;
+  @media screen and (max-width: $small-desktop) {
+    width: 100%;
+    margin: 0;
+    height: 100vh;
+    padding: 24px 16px;
+    overflow-y: scroll;
+    box-sizing: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100%;
+  }
+  @media screen and (max-width: $mobile) {
+    padding: 0 0 240px 0;
+    .form{
+      padding: 8px;
+      .modal__chosen{
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  svg {
+    max-width: 24px;
+    max-height: 24px;
+  }
+
+  @media screen and (max-width: $mobile) {
+    right: 8px;
+    top: 12px;
+    position: fixed;
+    z-index: 12;
+    svg {
+      max-width: 32px;
+      max-height: 32px;
+    }
+  }
+}
+
+.modal__title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  padding-right: 48px;
+  @media screen and (max-width: $small-desktop) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: $mobile) {
+    font-size: 24px;
+    padding: 12px 8px 16px 8px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: #fff;
+  }
+
+  &.modal__title--sub {
+    font-size: 16px;
+    margin-top: 4px;
+    color: $darkGrey;
+    font-weight: 400;
+    margin-bottom: 8px;
+    @media screen and (max-width: $small-desktop) {
+      margin-bottom: 8px;
+    }
+  }
+}

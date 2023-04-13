@@ -1,0 +1,147 @@
+.catalog__filters-wrapper--main {
+  padding: 0;
+}
+
+.filters__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  .select__wrapper--filter {
+    width: calc(14% - 4px);
+    @media screen and (max-width: $tablet) {
+      width: calc(50% - 4px);
+    }
+  }
+  @media screen and (max-width: $tablet) {
+    flex-direction: row;
+    gap: 4px;
+  }
+}
+// .select__wrapper--filter:first-child{
+//   @media screen and (max-width: $tablet) {
+//     width:100%;
+//   }
+// }
+
+.show__filters {
+  color: $blue;
+  cursor: pointer;
+  margin: 0 0 16px;
+}
+
+.no__data {
+  padding: 16px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.filter__controllers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog__filter-sort {
+  display: flex;
+}
+
+.catalog__sort {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  margin-right: 24px;
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    top: 0;
+    gap: 0;
+    margin-right: 0;
+  }
+
+  &.catalog__sort--open {
+    .catalog__sort-item {
+      display: block;
+    }
+  }
+}
+
+.catalog__sort-data {
+  display: none;
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    padding-bottom: 6px;
+    text-align: right;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    margin-left: 4px;
+  }
+}
+
+.catalog__sort-item {
+  padding: 8px 16px;
+  border-radius: 32px;
+  color: $blue;
+  cursor: pointer;
+  background: $light-blue;
+
+  &.catalog__sort-item--active {
+    color: $color-main;
+  }
+
+  @media screen and (max-width: $tablet) {
+    background: #fff;
+    display: none;
+    position: relative;
+    z-index: 2;
+    border-radius: 0;
+    border: 1px solid $color-grey-light;
+  }
+}
+
+.filters {
+  position: fixed;
+  top: 60px;
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  background: #fff;
+  box-shadow: $box-shadow;
+  padding: 24px;
+}
+
+.filters__line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.wrapper__filter-item_price{
+  position: relative;
+}
+.filter-item_price_title{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  pointer-events: none;
+  // background-color: $color-main;
+  // color: $white;
+  background-color: $color-grey-normal;
+  color: $black;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 10px;
+  @media screen and (max-width: 356px) {
+    padding: 3px 4px;
+  }
+}

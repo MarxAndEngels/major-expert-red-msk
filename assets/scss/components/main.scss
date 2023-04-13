@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+  font-size: 15px;
+}
+.ymaps-2-1-79-map-copyrights-promo{
+  display: none!important;
+}
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  // font-size: 16px;
+  font-family: $fontApple;
+  font-weight: 400;
+}
+
+.hide_title {
+  position: absolute;
+  z-index: -1;
+}
+
+.wrapper {
+  &.wrapper--fixed{
+    padding-top: 132px;
+    @media screen and (max-width: $mobile) {
+      padding-top: 96px;
+    }
+  }
+}
+
+.carousel__button {
+  display: none !important;
+}
+
+.error_text {
+  color: $error_text;
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.container {
+  width: $desktop-container;
+  margin: 0 auto;
+  @media screen and (max-width: $small-desktop) {
+    width: $small-desktop-container;
+  }
+  @media screen and (max-width: $tablet) {
+    width: $tablet-container;
+  }
+  @media screen and (max-width: $mobile) {
+    width: $mobile-container;
+    padding: 0 8px;
+  }
+}
+
+.heading-group__label {
+  color: $darkGrey;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+
+.slider_nav_arrow {
+  position: absolute;
+  z-index: 5;
+  width: 32px;
+  height: 32px;
+  background: $color-main;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .24s;
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: $tablet) {
+    &.main {
+      top: 80%;
+    }
+  }
+
+  &:after {
+    content: '';
+    position: relative;
+    width: 16%;
+    height: 16%;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+  }
+
+  &.next {
+    right: 8px;
+
+    &:after {
+      transform: rotate(-135deg);
+    }
+  }
+
+  &.prev {
+    &:after {
+      transform: rotate(45deg);
+    }
+
+    left: 8px;
+  }
+
+  &:hover {
+    background: $color-main-hover;
+  }
+}
+
+.mobile{
+  display: none !important;
+  @media screen and (max-width: $mobile) {
+    display: block !important;
+  }
+}
+.desktop{
+  display: block !important;
+  @media screen and (max-width: $mobile) {
+    display: none !important;
+  }
+}
+
+.wrapper__cookie{
+  background-color: white;
+  padding: 16px;
+  box-shadow: $box-shadow;
+  margin-top: 10px;
+  border-radius: 10px;
+}

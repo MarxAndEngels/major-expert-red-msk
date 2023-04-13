@@ -1,0 +1,33 @@
+.tippy-popper {
+  z-index: 250 !important;
+  //@media screen and (max-width: $mobile) {
+  //  display: none!important;
+  //}
+}
+
+.tippy--question {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  display: flex;
+}
+
+.tippy__icon {
+  width: 16px;
+  height: 16px;
+  fill: $color-main-two;
+  box-shadow: $box-shadow-button;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.tippy__text {
+  color: white;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.tippy-grey svg{
+  fill: #dbdee4;
+  box-shadow: none;
+}
