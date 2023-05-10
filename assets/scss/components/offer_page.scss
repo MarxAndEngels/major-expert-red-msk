@@ -60,7 +60,7 @@
 .offer__page-controls {
   @include grid-item;
   padding: 16px 28px;
-  width: calc(50% - 8px);
+  width: calc(40% - 8px);
   position: sticky;
   top: 126px;
   z-index: 10;
@@ -69,6 +69,7 @@
     order: 1;
   }
 }
+
 .offer__page-controls-top{
   display: flex;
   justify-content: space-between;
